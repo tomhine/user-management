@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ManagedUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::controller(ManagedUserController::class)->middleware(['auth'])->group(function () {
+    Route::get('/', 'index')->name('user.index');
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
