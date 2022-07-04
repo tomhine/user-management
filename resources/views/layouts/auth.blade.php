@@ -9,7 +9,7 @@
             <a href="{{ route('user.index') }}">User Management</a>
         </h1>
         <div class="lg:col-start-3">
-            <x-button-link href="/add-user">&plus; Add user</x-button-link>
+            <x-button-link href="{{ route('user.create') }}">&plus; Add user</x-button-link>
         </div>
     </header>
 
