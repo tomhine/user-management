@@ -24,4 +24,9 @@ With more time I would have liked to have added the following features;
 
 - Modal confirmation box for the user deletion button
 - Livewire / JavaScript to show real time validation on the input boxes
-- Better styles and animations
+- Testing
+- Improve styles and add animations
+
+## More From Me
+
+My big Laravel project is [live here](http://159.65.21.177/) with the [code here](https://github.com/tomhine/dev-to-clone) and you can find more of my [projects here](https://www.tomhine.dev/#projects).
