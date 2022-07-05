@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(ManagedUserController::class)->middleware(['auth'])->group(function () {
     Route::get('/', 'index')->name('user.index');
-    Route::get('/new-user', 'create')->name('user.create');
-    Route::post('/new-user', 'store')->name('user.store');
+    Route::get('/user/create', 'create')->name('user.create');
+    Route::post('/user', 'store')->name('user.store');
+    Route::get('/user/{user}/edit', 'edit')->name('user.edit');
+    Route::put('/user/{user}', 'update')->name('user.update');
+    Route::delete('/user/{user}', 'destroy')->name('user.destroy');
 });
 
 require __DIR__.'/auth.php';
