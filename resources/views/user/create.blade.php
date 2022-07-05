@@ -46,7 +46,7 @@
             <!-- Submit Button -->
             <div class="flex items-center mt-8">
                 <x-button class="w-full ">
-                    {{ __('Submit') }}
+                    {{ __('Create') }}
                 </x-button>
             </div>
 
