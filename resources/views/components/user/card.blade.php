@@ -1,3 +1,5 @@
+@props(['user_id'])
+
 <article class="p-4 rounded-lg bg-white flex gap-2 border">
     <div>
         <img src="https://picsum.photos/50" alt="user avatar" class="rounded-full">
@@ -18,8 +20,18 @@
         <div class="bg-white p-4 rounded-md border absolute z-10 w-40 right-0" x-show="open"
             @click.outside="open = false" x-cloak>
             <ul>
-                <li class="py-1 px-2.5 rounded-md hover:bg-gray-100">Edit user</li>
-                <li class="py-1 px-2.5 rounded-md hover:bg-gray-100">Delete user</li>
+                <a href="{{ route('user.edit', [ $user_id ]) }}">
+                    <li class="py-1 px-2.5 rounded-md hover:bg-gray-100">Edit user</li>
+                </a>
+                <li">
+                    <form action="{{ route('user.destroy', [ $user_id ]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+
+                        <button type="submit" class="py-1 px-2.5 rounded-md hover:bg-gray-100">Delete user</button>
+
+                    </form>
+                    </li>
             </ul>
         </div>
     </div>
