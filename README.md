@@ -17,3 +17,11 @@ password:
 ```
 password
 ```
+
+## Additional Features
+
+With more time I would have liked to have added the following features;
+
+- Modal confirmation box for the user deletion button
+- Livewire / JavaScript to show real time validation on the input boxes
+- Better styles and animations
