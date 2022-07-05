@@ -8,7 +8,12 @@ When you set up the project make sure to seed the database, I have a seeder setu
 
 You can log in as the admin user with these credentials;
 
+email:
 ```
-email: admin@example.com
-password: password
+admin@example.com
+```
+
+password:
+```
+password
 ```
